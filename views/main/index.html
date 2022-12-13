@@ -1,0 +1,38 @@
+{{ define "title" }}Home Index{{ end }}
+
+{{ define "content" }}
+
+<div class="container">
+    <div class="row mt-3">
+
+        <div class="col-xl-8">
+            <div class="row">
+                {{ $SERVER_URL := .server_url }}
+                {{ range .classes }}
+                <div class="col-lg-6 mb-2">
+                    <div class="card shadow h-100">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="{{ $SERVER_URL }}{{ .Logo }}" alt="" class="card-img-top">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ .Title }}</h5>
+                            <p class="card-text">{{ .Desc }}</p>
+                            <a href="/classes/{{ .ID }}" class="btn btn-primary">Try It!</a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+
+        </div>
+
+    </div>
+</div>
+
+{{ end }}

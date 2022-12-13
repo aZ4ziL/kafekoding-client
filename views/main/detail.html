@@ -1,0 +1,29 @@
+{{ define "title" }}{{ .class.Title }}{{ end }}
+
+{{ define "content" }}
+
+<div class="container">
+    <div class="row mt-3">
+
+        <div class="col-xl-8">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <h1 class="card-title">{{ .class.Title }}</h1>
+                            <img src="{{ .server_url }}{{ .class.Logo }}" alt="{{ .class.Title }}" class="img-fluid">
+                            <p class="card-text mt-3">{{ .class.Desc }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+
+        </div>
+
+    </div>
+</div>
+
+{{ end }}

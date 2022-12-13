@@ -1,0 +1,16 @@
+{{ define "title" }}Login User{{ end }}
+
+{{ define "content" }}
+<h1>Login User</h1>
+{{ if .flasher.Type }}
+{{ .flasher.Message }}
+{{ end }}
+
+<form action="" method="post">
+  <label for="username">Username</label> <br>
+  <input type="text" name="username" id="username" required> <br>
+  <label for="password">Password</label> <br>
+  <input type="text" name="password" id="password" required>
+  <button type="submit">Login</button>
+</form>
+{{ end }}
