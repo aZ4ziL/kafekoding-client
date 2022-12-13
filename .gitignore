@@ -1,5 +1,9 @@
 .idea/
 dist/
+changelog.md
+*.gz
+*.tar.gz
+*.zip
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
